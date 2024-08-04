@@ -1,8 +1,8 @@
 # Update
-11/25/2021
-YouTube changed its page structure, so I updated the script. Also add support to hide videos on right side of the video watching page. 
-08/04/2024
-YouTube has once again changed its page structure. With help from [@misspent](https://github.com/misspent), I've updated the script accordingly.
+* 11/25/2021
+  - YouTube changed its page structure, so I updated the script. Also add support to hide videos on right side of the video watching page. 
+* 08/04/2024
+  - YouTube has once again changed its page structure. With help from [@misspent](https://github.com/misspent), I've updated the script accordingly.
 
 # Introduction
 
