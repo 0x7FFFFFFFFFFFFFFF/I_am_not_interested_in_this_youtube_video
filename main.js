@@ -14,7 +14,7 @@
         console.log("Youtube home page detected!");
 
         setInterval((function () {
-            let cells = $("ytd-rich-item-renderer.style-scope.ytd-rich-grid-row:not(.fucked)");
+            let cells = $("ytd-rich-item-renderer.ytd-rich-grid-renderer.style-scope:not(.fucked)");
             if(cells.length == 0) {
                 console.log("Can't find any cells to check");
             }
