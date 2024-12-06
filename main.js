@@ -55,7 +55,7 @@
     
     if (/youtube\.com\/watch/.test(location.href)) {
         setInterval((function () {
-            let cells = $("ytd-compact-video-renderer.style-scope.ytd-watch-next-secondary-results-renderer:not(.fucked)");
+            let cells = $("ytd-compact-video-renderer.style-scope:not(.fucked)");
             cells.each(function () {
                 let cell = $(this);
                 let temp = cell.find("ytd-thumbnail");
