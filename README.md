@@ -4,7 +4,9 @@
 * 08/04/2024
   - YouTube has once again changed its page structure. With help from [@misspent](https://github.com/misspent), I've updated the script accordingly.
 * 11/22/2024
-  - YouTube has once again changed its page structure. I've updated the script accordingly. Also add support for Shorts removal. 
+  - YouTube has once again changed its page structure. I've updated the script accordingly. Also add support for Shorts removal.
+* 12/06/2024
+  - Update again. 
   
 # Introduction
 
