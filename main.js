@@ -5,6 +5,7 @@
 // @description I'm not interested in this YouTube video!
 // @match       *://www.youtube.com/*
 // @run-at      document-end
+// @require     https://update.greasyfork.org/scripts/487311/1327382/My%20Trusted-Types%20Helper.js
 // @require     https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
 // ==/UserScript==
 
