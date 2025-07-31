@@ -19,18 +19,18 @@
     
             cells.each(function () {
                 let cell = $(this);
-                let temp = cell.find("ytd-thumbnail");
+                let temp = cell.find("yt-thumbnail-view-model");
                 temp.hover(function (e) {
                     if (e.ctrlKey) {
-                        $(this).closest("ytd-rich-item-renderer").find("button.style-scope.yt-icon-button").click();
+                        $(this).closest("ytd-rich-item-renderer").find('button[aria-label="More actions"]').click();
                         setTimeout(function () {
-                            $("yt-formatted-string:contains('Not interested')").click();
+                            $("span:contains('Not interested')").click();
                         }, 50);
                     }
                     else if (e.altKey) {
-                        $(this).closest("ytd-rich-item-renderer").find("button.style-scope.yt-icon-button").click();
+                        $(this).closest("ytd-rich-item-renderer").find('button[aria-label="More actions"]').click();
                         setTimeout(function () {
-                            $(`yt-formatted-string:contains("Don't recommend channel")`).click();
+                            $(`span:contains("Don't recommend channel")`).click();
                         }, 50);
                     }
                 });
@@ -56,21 +56,21 @@
     
     if (/youtube\.com\/watch/.test(location.href)) {
         setInterval((function () {
-            let cells = $("ytd-compact-video-renderer.style-scope:not(.fucked)");
+            let cells = $("yt-lockup-view-model:not(.fucked)");
             cells.each(function () {
                 let cell = $(this);
-                let temp = cell.find("ytd-thumbnail");
+                let temp = cell.find("yt-thumbnail-view-model");
                 temp.hover(function (e) {
                     if (e.ctrlKey) {
-                        $(this).closest("ytd-compact-video-renderer").find("button.style-scope.yt-icon-button").click();
+                        $(this).closest("yt-lockup-view-model").find('button[aria-label="More actions"]').click();
                         setTimeout(function () {
-                            $("yt-formatted-string:contains('Not interested')").click();
+                            $("span:contains('Not interested')").click();
                         }, 50);
                     }
                     else if (e.altKey) {
-                        $(this).closest("ytd-compact-video-renderer").find("button.style-scope.yt-icon-button").click();
+                        $(this).closest("ytd-compact-video-renderer").find('button[aria-label="More actions"]').click();
                         setTimeout(function () {
-                            $(`yt-formatted-string:contains("Don't recommend channel")`).click();
+                            $(`span:contains("Don't recommend channel")`).click();
                         }, 50);
                     }
                 });
