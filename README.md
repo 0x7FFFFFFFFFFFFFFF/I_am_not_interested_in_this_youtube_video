@@ -7,11 +7,14 @@
   - YouTube has once again changed its page structure. I've updated the script accordingly. Also add support for Shorts removal.
 * 12/06/2024
   - Update again. 
-  
+* 08/09/2025
+  - Update again, with help from [@misspent](https://github.com/0x7FFFFFFFFFFFFFFF/I_am_not_interested_in_this_youtube_video/issues/9#issuecomment-3168578625). Thanks my friend.
+
 # Introduction
 
 This is a Tampermonkey/Greasemonkey script. When enabled, hover over a YouTube video's thumbnail (the image icon of the video) with your mouse while hoding down ctrl key will click "Not interested". If holding down alt key instead, "Don't recommend this channel" will be clicked.
 
 ![](https://raw.githubusercontent.com/0x7FFFFFFFFFFFFFFF/I_am_not_interested_in_this_youtube_video/main/youtube.gif)
+
 
 
