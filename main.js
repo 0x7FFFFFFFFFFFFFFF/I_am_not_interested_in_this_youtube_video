@@ -13,39 +13,39 @@
     'use strict';
     if (/youtube\.com\/?$/.test(location.href)) {
         console.log("Youtube home page detected!");
-    
+
         setInterval((function () {
-            let cells = $("ytd-rich-item-renderer.ytd-rich-grid-renderer.style-scope:not(.fucked)");
-    
+            let cells = $("ytd-rich-item-renderer.ytd-rich-grid-renderer:not(.fucked)");
+
             cells.each(function () {
                 let cell = $(this);
-                let temp = cell.find("ytd-thumbnail");
+                let temp = cell.find("yt-thumbnail-view-model");
                 temp.hover(function (e) {
                     if (e.ctrlKey) {
-                        $(this).closest("ytd-rich-item-renderer").find("button.style-scope.yt-icon-button").click();
+                        $(this).closest("ytd-rich-item-renderer").find("button-view-model > button").click();
                         setTimeout(function () {
-                            $("yt-formatted-string:contains('Not interested')").click();
+                            $("span:contains('Not interested')").click();
                         }, 50);
                     }
                     else if (e.altKey) {
-                        $(this).closest("ytd-rich-item-renderer").find("button.style-scope.yt-icon-button").click();
+                        $(this).closest("ytd-rich-item-renderer").find("button-view-model > button").click();
                         setTimeout(function () {
-                            $(`yt-formatted-string:contains("Don't recommend channel")`).click();
+                            $(`span:contains("Don't recommend channel")`).click();
                         }, 50);
                     }
                 });
             });
             cells.addClass("fucked");
-    
-            let shorts = $("ytd-rich-item-renderer.ytd-rich-shelf-renderer.style-scope:not(.fucked)");
+
+            let shorts = $("ytd-rich-item-renderer.ytd-rich-shelf-renderer:not(.fucked)");
             shorts.each(function () {
                 let cell = $(this);
                 let temp = cell.find("ytm-shorts-lockup-view-model");
                 temp.hover(function (e) {
                     if (e.ctrlKey || e.altKey) {
-                        $(this).closest("ytd-rich-item-renderer").find("button.yt-spec-button-shape-next").click();
+                        $(this).closest("ytd-rich-item-renderer").find("button-view-model > button").click();
                         setTimeout(function () {
-                            $("span.yt-core-attributed-string:visible:contains('Not interested')").click();
+                            $("span:visible:contains('Not interested')").click();
                         }, 50);
                     }
                 });
@@ -53,24 +53,24 @@
             shorts.addClass("fucked");
         }), 2000);
     }
-    
+
     if (/youtube\.com\/watch/.test(location.href)) {
         setInterval((function () {
-            let cells = $("ytd-compact-video-renderer.style-scope:not(.fucked)");
+            let cells = $("ytd-compact-video-renderer:not(.fucked)");
             cells.each(function () {
                 let cell = $(this);
-                let temp = cell.find("ytd-thumbnail");
+                let temp = cell.find("yt-thumbnail-view-model");
                 temp.hover(function (e) {
                     if (e.ctrlKey) {
-                        $(this).closest("ytd-compact-video-renderer").find("button.style-scope.yt-icon-button").click();
+                        $(this).closest("ytd-compact-video-renderer").find("button-view-model > button").click();
                         setTimeout(function () {
-                            $("yt-formatted-string:contains('Not interested')").click();
+                            $("span:contains('Not interested')").click();
                         }, 50);
                     }
                     else if (e.altKey) {
-                        $(this).closest("ytd-compact-video-renderer").find("button.style-scope.yt-icon-button").click();
+                        $(this).closest("ytd-compact-video-renderer").find("button-view-model > button").click();
                         setTimeout(function () {
-                            $(`yt-formatted-string:contains("Don't recommend channel")`).click();
+                            $(`span:contains("Don't recommend channel")`).click();
                         }, 50);
                     }
                 });
@@ -79,4 +79,6 @@
         }), 2000);
     }
 })();
+
+
 
